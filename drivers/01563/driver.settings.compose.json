@@ -1,0 +1,271 @@
+[
+  {
+    "id": "1",
+    "value": 0,
+    "label": {
+      "en": "Basic Set OFF Level"
+    },
+    "hint": {
+      "en": "Setting the BASIC command value.\nWhen the flood trigger off(0x00), send the BASIC CC to the group 2.\n"
+    },
+    "zwave": {
+      "index": 1,
+      "size": 1,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "type": "number"
+  },
+  {
+    "id": "10",
+    "value": 18,
+    "label": {
+      "en": "Auto Report Battery Time"
+    },
+    "hint": {
+      "en": "The interval time for auto report the battery level. \n0 means turn off auto report.\nThe default value is 12. The tick time can setting by the configuration No.20."
+    },
+    "zwave": {
+      "index": 10,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 127
+    },
+    "type": "number"
+  },
+  {
+    "id": "13",
+    "value": 18,
+    "label": {
+      "en": "Auto Report Temperature Time"
+    },
+    "hint": {
+      "en": "The interval time for auto report the temperature. \n0 means turn off auto report.\nThe default value is 12. The tick time can setting by the configuration No.20."
+    },
+    "zwave": {
+      "index": 13,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 127
+    },
+    "type": "number"
+  },
+  {
+    "id": "14",
+    "value": 18,
+    "label": {
+      "en": "Auto Report Humidity Time"
+    },
+    "hint": {
+      "en": "The interval time for auto report the humidity. \n0 means turn off auto report.\nThe default value is 12. The tick time can setting by the configuration No.20."
+    },
+    "zwave": {
+      "index": 14,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 127
+    },
+    "type": "number"
+  },
+  {
+    "id": "15",
+    "value": 18,
+    "label": {
+      "en": "Auto Report Flood Time"
+    },
+    "hint": {
+      "en": "The interval time for auto report the flood state. \n0 means turn off auto report.\nThe default value is 12. The tick time can setting by the configuration No.20.\n"
+    },
+    "zwave": {
+      "index": 15,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 127
+    },
+    "type": "number"
+  },
+  {
+    "id": "2",
+    "value": 255,
+    "label": {
+      "en": "Basic Set ON Level"
+    },
+    "hint": {
+      "en": "Setting the BASIC command value.\nWhen the flood trigger on(0xFF), send the BASIC CC to the group 2."
+    },
+    "zwave": {
+      "index": 2,
+      "size": 1,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "type": "number"
+  },
+  {
+    "id": "20",
+    "value": 30,
+    "label": {
+      "en": "Auto Report Tick Interval"
+    },
+    "hint": {
+      "en": "The interval time for auto report each tick. Setting this configuration will effect configuration No.10, No.13, No.14 and No.15.\nUnits of one minute.\nCaution1: Setting to 0 means turn off all auto report function.\nCaution2: The value is unsigned byte\n"
+    },
+    "zwave": {
+      "index": 20,
+      "size": 1,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "type": "number"
+  },
+  {
+    "id": "21",
+    "value": 1,
+    "label": {
+      "en": "Temperature Differential Report"
+    },
+    "hint": {
+      "en": "The temperature differential to report.\n0 means turn off this function. \nThe unit is Fahrenheit.\nEnable this function the device will detect every 10 seconds. \nAnd when the temperature is over 140 degree Fahrenheit, it will continue report."
+    },
+    "zwave": {
+      "index": 21,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 127
+    },
+    "type": "number"
+  },
+  {
+    "id": "23",
+    "value": 5,
+    "label": {
+      "en": "Humidity Differential Report"
+    },
+    "hint": {
+      "en": "The humidity differential to report.\n0 means turn off this function. \nThe unit is percentage.\nEnable this function the device will detect every 10 seconds. "
+    },
+    "zwave": {
+      "index": 23,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 60
+    },
+    "type": "number"
+  },
+  {
+    "id": "5",
+    "value": "0",
+    "label": {
+      "en": "Operation Mode"
+    },
+    "hint": {
+      "en": "Operation mode. Using bit to control.\nBit0: Disable the Flood function.\nBit1: Reserve.\nBit2: Reserve.\nBit3: Setting the temperature scale.\n  0: Fahrenheit, 1:Celsius\nBit4: Reserve.\nBit5: Disable the temperature report after event triggered.     (1:Disable, 0:Enable)\nBit6: Reserve.\nBit7: Reserve.\n"
+    },
+    "zwave": {
+      "index": 5,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "1",
+        "label": {
+          "en": " Disable the Flood function."
+        }
+      },
+      {
+        "id": "8",
+        "label": {
+          "en": "Setting the temperature scale. 0: Fahrenheit, 1:Celsius"
+        }
+      },
+      {
+        "id": "32",
+        "label": {
+          "en": "Disable the temperature report after event triggered.  (1:Disable, 0:Enable)"
+        }
+      }
+    ],
+    "type": "dropdown"
+  },
+  {
+    "id": "6",
+    "value": 0,
+    "label": {
+      "en": "Mult-Sensor Function Switch"
+    },
+    "hint": {
+      "en": "Multisensor function switch. Using bit to control."
+    },
+    "zwave": {
+      "index": 6,
+      "size": 1
+    },
+    "attr": {
+      "min": 64,
+      "max": 64
+    },
+    "type": "number"
+  },
+  {
+    "id": "7",
+    "value": "0",
+    "label": {
+      "en": "Customer Function"
+    },
+    "hint": {
+      "en": "Customer function switch, using bit control."
+    },
+    "zwave": {
+      "index": 7,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "32",
+        "label": {
+          "en": "Disable Multi CC in auto report. (1:Disable, 0:Enable)"
+        }
+      },
+      {
+        "id": "64",
+        "label": {
+          "en": "Disable to report battery state when the device triggered. (1:Disable, 0:Enable)"
+        }
+      },
+      {
+        "id": "8",
+        "label": {
+          "en": "Disable send out BASIC OFF after the flood event cleared. (1:Disable, 0:Enable)"
+        }
+      },
+      {
+        "id": "16",
+        "label": {
+          "en": "Notification Type, 0: Using Notification Report.          1: Using Sensor Binary Report."
+        }
+      }
+    ],
+    "type": "dropdown"
+  }
+]

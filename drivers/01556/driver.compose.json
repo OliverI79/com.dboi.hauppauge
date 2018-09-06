@@ -1,0 +1,70 @@
+{
+  "id": "01556",
+  "name": {
+    "en": "Metering Plug 01556"
+  },
+  "class": "socket",
+  "capabilities": [
+    "measure_power",
+    "meter_power",
+    "onoff"
+  ],
+  "images": {
+    "large": "/drivers/01556/assets/images/large.png",
+    "small": "/drivers/01556/assets/images/small.png"
+  },
+  "mobile": {
+    "components": [
+      {
+        "id": "icon",
+        "capabilities": [
+          "onoff"
+        ]
+      },
+      {
+        "id": "sensor",
+        "capabilities": [
+          "meter_power",
+          "measure_power"
+        ]
+      },
+      {
+        "id": "toggle",
+        "capabilities": [
+          "onoff"
+        ]
+      }
+    ]
+  },
+  "zwave": {
+    "manufacturerId": 316,
+    "productTypeId": [
+      1
+    ],
+    "productId": [
+      17
+    ],
+    "zwaveAllianceProductId": 1598,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1598/PAN11-1B manual-20151204.pdf",
+    "learnmode": {
+      "instruction": {
+        "en": "1. Put your Z-Wave controller into inclusion mode by following the instructions provided by the controller manufacturer. \r\n2. Pressing On/Off button three times within 2 seconds will enter inclusion mode."
+      }
+    },
+    "unlearnmode": {
+      "instruction": {
+        "en": "1. Put your Z-Wave controller into exclusion mode by following the instructions provided by the controller manufacturer. \r\n2. Pressing On/Off button three times within 2 seconds will enter exclusion mode. "
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Lifeline\r\n\r\nFor group 1, the Switch will report ON/OFF status and meter value."
+        }
+      }
+    }
+  }
+}

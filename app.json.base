@@ -1,0 +1,41 @@
+{
+  "id": "com.dboi.hauppauge",
+  "sdk": 2,
+  "name": {
+    "en": "Hauppauge mySmartHome"
+  },
+  "version": "2.0.10",
+  "compatibility": ">=1.5.3",
+  "description": {
+    "en": "Hauppauge mySmartHome Z-Wave device support"
+  },
+  "category": [
+    "appliances",
+    "lights",
+    "security"
+  ],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Oliver Ickler",
+    "email": "oliver@oliver-ickler.de"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Oliver Ickler",
+        "email": "oliver@oliver-ickler.de"
+      }
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/oickler/com.dboi.hauppauge/issues"
+  },
+  "flow": {
+    "triggers": [],
+    "actions": []
+  },
+  "drivers": []
+}

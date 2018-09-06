@@ -1,0 +1,20 @@
+{
+	"actions": [
+	  {
+		"id": "Hauppauge_01556_reset_meter",
+		"title": {
+		  "en": "Reset meter values"
+		},
+		"hint": {
+		  "en": "Reset the accumulated power usage value (kWh), note that this can not be reversed."
+		},
+		"args": [
+		  {
+			"name": "device",
+			"type": "device",
+			"filter": "driver_id=01556"
+		  }
+		]
+	  }
+	]
+  }

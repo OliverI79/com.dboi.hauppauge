@@ -1,0 +1,28 @@
+{
+  "name": "com.dboi.hauppauge",
+  "version": "2.0.0",
+  "description": "This app adds support for the Z-wave devices made by Hauppauge (http://www.hauppauge.de).",
+  "main": "app.js",
+  "requires": true,
+  "dependencies": {
+    "homey-log": "^1.0.1",
+    "homey-meshdriver": "^1.2.23"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "run": "copy /y app.json.base app.json && athom app run",
+    "validate": "copy /y app.json.base app.json && athom app validate",
+    "build": "copy /y app.json.base app.json && athom app build",
+    "install": "copy /y app.json.base app.json && athom app install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oickler/com.dboi.hauppauge.git"
+  },
+  "author": "Oliver Ickler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oickler/com.dboi.hauppauge/issues"
+  },
+  "homepage": "https://forum.athom.com/discussion/1745/app-z-wave-neo-coolcam-z-wave-devices"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "01559",
+  "name": {
+    "en": "01559 4-in-1 multisensor"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "alarm_contact",
+    "measure_luminance",
+    "alarm_motion",
+    "alarm_tamper",
+    "measure_temperature"
+  ],
+  "images": {
+    "large": "/drivers/01559/assets/images/large.png",
+    "small": "/drivers/01559/assets/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 316,
+    "productTypeId": [
+      2
+    ],
+    "productId": [
+      12
+    ],
+    "zwaveAllianceProductId": 1087,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1087/PST02_Manual-2014-08-15B.pdf",
+    "learnmode": {
+      "instruction": {
+        "en": "There are two tamper keys in the device, one is in the back side, another is in the front side.  Both of them  can add,  remove, reset or association from Z-Wave network.\nTo add into a Z-Wave network: \n1. Have Z-Wave  Controller entered inclusion mode.\n2. Pressing tamper key three times within 1.5 seconds to enter the inclusion mode.\n3. After add successful, the device will wake to receive the setting command from Z-Wave Controller about 20 seconds."
+      }
+    },
+    "unlearnmode": {
+      "instruction": {
+        "en": "There are two tamper keys in the device, one is in the back side, another is in the front side.  Both of them  can add,  remove, reset or association from Z-Wave network.\nTo remove the device from a Z-Wave network: \n1. Have Z-Wave  Controller entered exclusion mode.\n2. Pressing tamper key three times within 1.5 seconds to enter the exclusion mode.\nNode ID has been excluded."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Z-Wave Plus Lifeline"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "01563",
+  "name": {
+    "en": "01563 flood sensor"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_battery",
+    "measure_humidity",
+    "alarm_tamper",
+    "measure_temperature",
+    "alarm_water"
+  ],
+  "images": {
+    "large": "/drivers/01563/assets/images/large.png",
+    "small": "/drivers/01563/assets/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 316,
+    "productTypeId": [
+      2
+    ],
+    "productId": [
+      31
+    ],
+    "zwaveAllianceProductId": 1299,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1299/PAT02_Manual.pdf",
+    "learnmode": {
+      "instruction": {
+        "en": "The device have auto inclusion function, if the device not add into Z-Wave network, after power up, it will into the auto inclusion (NWI) mode.\nIn this mode, let the Z-Wave™ Controller entered inclusion mode, the device will added.\nThe NWI mode will timeout in 30 seconds.\nAfter that you can pressing the tamper key three times within 1.5 seconds to manual inclusion with Z-Wave controller.\nAfter inclusion successful, the device will awake to receive the setting command from Z-Wave™ Controller about 20 seconds.\n"
+      }
+    },
+    "unlearnmode": {
+      "instruction": {
+        "en": "1. Have Z-Wave™ Controller entered exclusion mode.\n2. Pressing tamper key three times within 1.5 seconds to enter the exclusion mode.\nNode ID has been excluded.\n"
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "The group 1 is for receiving the report message, like triggered event, temperature, humidity etc."
+        }
+      }
+    }
+  }
+}

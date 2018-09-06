@@ -1,0 +1,292 @@
+[
+  {
+    "id": "10",
+    "value": 12,
+    "label": {
+      "en": "Auto Report Battery Time"
+    },
+    "hint": {
+      "en": "The interval time for auto report the battery level. \n0 means turn off auto report battery.\nThe default value is 12. The tick time can setting by the configuration No.20."
+    },
+    "zwave": {
+      "index": 10,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 127
+    },
+    "type": "number"
+  },
+  {
+    "id": "11",
+    "value": 12,
+    "label": {
+      "en": "Auto Report Door/Window State Time"
+    },
+    "hint": {
+      "en": "The interval time for auto report the door/window state. \n0 means turn off auto report door/window state.\nThe default value is 12. The tick time can setting by the configuration No.20."
+    },
+    "zwave": {
+      "index": 11,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 127
+    },
+    "type": "number"
+  },
+  {
+    "id": "12",
+    "value": 12,
+    "label": {
+      "en": "Auto Report Illumination Time"
+    },
+    "hint": {
+      "en": "The interval time for auto report the illumination. \n0 means turn off auto report illumination.\nThe default value is 12. The tick time can setting by the configuration No.20."
+    },
+    "zwave": {
+      "index": 12,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 127
+    },
+    "type": "number"
+  },
+  {
+    "id": "13",
+    "value": 12,
+    "label": {
+      "en": "Auto Report Temperature Time"
+    },
+    "hint": {
+      "en": "The interval time for auto report the temperature. \n0 means turn off auto report temperature.\nThe default value is 12. The tick time can setting by the configuration No.20."
+    },
+    "zwave": {
+      "index": 13,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 127
+    },
+    "type": "number"
+  },
+  {
+    "id": "2",
+    "value": 255,
+    "label": {
+      "en": "Basic Set Level"
+    },
+    "hint": {
+      "en": "Setting the BASIC command value to turn on the light. The 0xFF(-1) means turn on the light. For dimmer equipment 1 to 100 means the light strength.\n0 means turn off the light."
+    },
+    "zwave": {
+      "index": 2,
+      "size": 1,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "type": "number"
+  },
+  {
+    "id": "20",
+    "value": 30,
+    "label": {
+      "en": "Auto Report Tick Interval"
+    },
+    "hint": {
+      "en": "The interval time for auto report each tick. Setting this configuration will effect configuration No.10, No.11, No.12 and No.13.\nCaution: Setting to 0 means turn off all auto report function."
+    },
+    "zwave": {
+      "index": 20,
+      "size": 1,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "type": "number"
+  },
+  {
+    "id": "21",
+    "value": 1,
+    "label": {
+      "en": "Temperature Differential Report"
+    },
+    "hint": {
+      "en": "The temperature differential to report.\n0 means turn off this function. \nThe unit is Fahrenheit.\nEnable this function the device will detect every minutes. \nAnd when the temperature is over 140 degree Fahrenheit, it will continue report.\nEnable this functionality will cause some issue please see the detail in the “Temperature Report” section."
+    },
+    "zwave": {
+      "index": 21,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 127
+    },
+    "type": "number"
+  },
+  {
+    "id": "22",
+    "value": 0,
+    "label": {
+      "en": "Illumination Differential Report"
+    },
+    "hint": {
+      "en": "The illumination differential to report.\n0 means turn off this function. \nThe unit is percentage.\nEnable this function the device will detect every minutes. \nEnable this functionality will cause some issue please see the detail in the “Illumination Report” section.\n"
+    },
+    "zwave": {
+      "index": 22,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 99
+    },
+    "type": "number"
+  },
+  {
+    "id": "3",
+    "value": 80,
+    "label": {
+      "en": "PIR Sensitivity"
+    },
+    "hint": {
+      "en": "PIR sensitivity settings.\n0 means disable the PIR motion.\n1 means the lowest sensitivity,\n99 means the highest sensitivity.\nHigh sensitivity means can detected long distance, but if there is more noise signal in the environment, it will re-trigger too frequency. "
+    },
+    "zwave": {
+      "index": 3,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 99
+    },
+    "type": "number"
+  },
+  {
+    "id": "4",
+    "value": 99,
+    "label": {
+      "en": "Light Threshold"
+    },
+    "hint": {
+      "en": "Setting the illumination threshold to turn on the light. When the event triggered and the environment illumination lower then the threshold, the device will turn on the light.\n0 means turn off illumination detected function. And never turn on the light.\n1 means darkest.\n99 means brightest.\n100 means turn off illumination detected function. And always turn on the light.\n\nNotice: In none test mode, only the value in 1 to 99 will enable the illumination detected function and update the illumination value."
+    },
+    "zwave": {
+      "index": 4,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 100
+    },
+    "type": "number"
+  },
+  {
+    "id": "5",
+    "value": 0,
+    "label": {
+      "en": "Operation Mode"
+    },
+    "hint": {
+      "en": "Operation mode. Using bit to control.\nBit0: Reserve.\nBit1: 1 means test mode, \n          0 means normal mode.\nNotice: \nThis bit only effect by the DIP Switch setting to “customer mode”, otherwise it decides by DIP Switch setting to Test or Normal Mode.\nBit2: Disable the door/window function. (1:Disable, 0:Enable)\nBit3: Setting the temperature scale.\n  0: Fahrenheit, 1:Celsius\nBit4: Disable the illumination report after event triggered. (1:Disable, 0:Enable)\nBit5: Disable the temperature report after event triggered. (1:Disable, 0:Enable)\nBit6: Reserve.\nBit7: Disable the back key release into test mode. (1:Disable, 0:Enable)\nNotice: The reserve bit is allowed any value, but no effect."
+    },
+    "zwave": {
+      "index": 5,
+      "size": 1,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "type": "number"
+  },
+  {
+    "id": "6",
+    "value": 4,
+    "label": {
+      "en": "Mult-Sensor Function Switch"
+    },
+    "hint": {
+      "en": "Multisensor function switch. Using bit to control.\nBit0: Disable magnetic integrate illumination to turn ON the lighting nodes in the association group 2. (1:Disable, 0:Enable)\nBit1: Disable PIR integrate Illumination to turn ON the lighting nodes in the association group 2. (1:Disable, 0:Enable)\nBit2: Disable magnetic integrate PIR  to turn ON the lighting nodes in the association group 2. (Default is Disable) (1:Disable, 0:Enable)\nBit3: When Bit2 is 0 (Enable), Are the device and the lighting in the same room?\n  0: In the same room(Default),\n  1: In the different room.\nNotice: If this bit is 1, it is recommended also set the Bit1 to 1, cause    the PIR triggered, doesn't mean the people in that room.\nBit4: Disable delay 5 seconds to turn off the light, when door/window closed.  (1:Disable, 0:Enable)\nBit5: Disable auto turn off the light, after door/window opened to turn on the light.  (1:Disable, 0:Enable)\nNotice: If bit2 is zero, this setting is useless.\nNotice: If the configuration No.9 is zero, this setting is useless.\nBit6: Reserve.\nBit7: Reserve.\nNotice: The reserve bit is allowed any value, but no effect."
+    },
+    "zwave": {
+      "index": 6,
+      "size": 1,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "type": "number"
+  },
+  {
+    "id": "7",
+    "value": 4,
+    "label": {
+      "en": "Customer Function"
+    },
+    "hint": {
+      "en": "Customer function switch, using bit control.\nBit0: Reserve.\nBit1: Enable sending motion OFF report.  (0:Disable, 1:Enable)\nNote: Depends on the Bit4,\n0: Report Notification CC, \nType: 0x07, Event: 0xFE\n1: Sensor Binary Report, \nType: 0x0C, Value: 0x00\nBit2: Enable PIR super sensitivity mode.  (0:Disable, 1:Enable)\nBit3: Disable send out BASIC OFF after door closed.  (1:Disable, 0:Enable)\nBit4: Notification Type,  \n        0: Using Notification Report. \n        1: Using Sensor Binary Report.\nBit5: Disable Multi CC in auto report.  (1:Disable, 0:Enable)\nBit6: Disable to report battery state when the device triggered.  (1:Disable, 0:Enable)\nBit7: Reserve.\nNotice: The reserve bit is allowed any value, but no effect."
+    },
+    "zwave": {
+      "index": 7,
+      "size": 1,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "type": "number"
+  },
+  {
+    "id": "8",
+    "value": 3,
+    "label": {
+      "en": "PIR Re-Detect Interval Time"
+    },
+    "hint": {
+      "en": "In the normal mode, after the PIR motion detected, setting the re-detect time. 8 seconds per tick, default tick is 3 (24 seconds).\nSetting the suitable value to prevent received the trigger signal too frequently. Also can save the battery energy.\nNotice: If this value bigger than the configuration setting NO. 9. There is a period after the light turned off and the PIR not start detecting.\n"
+    },
+    "zwave": {
+      "index": 8,
+      "size": 1
+    },
+    "attr": {
+      "min": 1,
+      "max": 127
+    },
+    "type": "number"
+  },
+  {
+    "id": "9",
+    "value": 4,
+    "label": {
+      "en": "Turn Off Light Time"
+    },
+    "hint": {
+      "en": "After turn on the lighting, setting the delay time to turn off the lighting when the PIR motion is not detected. 8 seconds per tick, default tick is 4 (32 seconds).\n0 means never send turn off light command."
+    },
+    "zwave": {
+      "index": 9,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 127
+    },
+    "type": "number"
+  }
+]
